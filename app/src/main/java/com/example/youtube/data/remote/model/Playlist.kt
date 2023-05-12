@@ -1,4 +1,4 @@
-package com.example.youtube.model
+package com.example.youtube.data.remote.model
 
 data class Playlist(
     val kind: String?,
@@ -17,7 +17,7 @@ data class Playlist(
         val etag: String?,
         val id: String?,
         val snippet: Snippet?,
-        val contentDetails: ContentDetails?
+        val contentDetails: PlaylistDetails?
     ) {
         data class Snippet(
             val publishedAt: String?,
@@ -72,7 +72,7 @@ data class Playlist(
             )
         }
 
-        data class ContentDetails(
+        data class PlaylistDetails(
             val itemCount: Int?
         )
     }

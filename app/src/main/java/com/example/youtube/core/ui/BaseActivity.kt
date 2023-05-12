@@ -1,11 +1,6 @@
-package com.example.youtube.base
+package com.example.youtube.core.ui
 
-import android.content.Context
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
-import android.os.Build
 import android.os.Bundle
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 
@@ -21,7 +16,6 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> (): AppCompatA
         super.onCreate(savedInstanceState)
         binding = inflateViewBinding()
         setContentView(binding.root)
-
         isConnection()
         initViews()
         initViewModel()
